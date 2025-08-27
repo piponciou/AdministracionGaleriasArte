@@ -1,14 +1,22 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+
 public class ProyectoAvance {
 
     public static void main(String[] args){
+        //creamos el hashmap para los artistas en el main, usando el rut como clave
+        
+        HashMap<String, Artista> artistas = new HashMap<>();
    
         /*---------------------------INGRESO DE 1 ARTISTA--------------------------------------------*/
-        Artista art1 = new Artista("Van Gogh",30);
+        Artista art1 = new Artista("11.111.111-1","Van Gogh",30);
         //REGISTRAMOS UNA OBRA Y LE PASAMOS COMO PARAMETRO AL ARTISTA1
         Obra obra1 = new Obra("La noche estrellada",art1,1889,1050000,"DISPONIBLE");
         //ASOCIAMOS LA OBRA1 DENTRO DEL ARTISTA1
         art1.agregarObra(obra1);
+        // AGREGAMOS AL HASHMAP ARTISTA 1
+        artistas.put(art1.getRut(), art1);
+        
         /*------------------------------------------------------------------------------------------*/
         
         /*En caso de que queramos agregarle otra obra al artista simplemente registramos primero la obra y luego lo asociamos dentro del artista correpondiente*/
@@ -18,9 +26,11 @@ public class ProyectoAvance {
         
         
         /*----------------------------INGRESO DE OTRO ARTISTA------------------------------------*/
-        Artista art2 = new Artista("Leonardo da Vinci",50);
+        Artista art2 = new Artista("22.222.222-2","Leonardo da Vinci",50);
         Obra obra3 = new Obra("La última cena",art2,1497,3000000,"PRESTADO");
         art2.agregarObra(obra3);
+        // AGREGAMOS AL HASHMAP ARTISTA 2
+        artistas.put(art2.getRut(), art2);
         /*------------------------------------------------------------------------------------------*/
         
         
