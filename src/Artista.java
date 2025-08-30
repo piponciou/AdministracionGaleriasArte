@@ -1,55 +1,28 @@
-import java.util.ArrayList;
-
 public class Artista {
     private String rut;
     private String nombre;
     private int edad;
-    private ArrayList<Obra> obras;
+    // CAMBIO IMPORTANTE: ahora tiene ListaObras, no ArrayList
+    private ListaObras obras;
 
-    public Artista(String rut,String nombre, int edad) {
+    public Artista(String rut, String nombre, int edad) {
         this.rut = rut;
         this.nombre = nombre;
         this.edad = edad;
-        this.obras = new ArrayList<>();
+        this.obras = new ListaObras();
     }
+    // Getters y setters igual que antes, sólo cambia el tipo para obras
+    public String getRut() { return rut; }
+    public void setRut(String rut) { this.rut = rut; }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public int getEdad() { return edad; }
+    public void setEdad(int edad) { this.edad = edad; }
+    public ListaObras getObras() { return obras; }
+    public void setObras(ListaObras obras) { this.obras = obras; }
 
-    public String getRut() {
-        return rut;
-    }
-
-    public void setRut(String rut) {
-        this.rut = rut;
-    }
-    
-    //metodo para agregar una obra a un artista de forma manual
-    public void agregarObra(Obra obra){
-        this.obras.add(obra);
-    }
-    
-    //setters y getters
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public ArrayList<Obra> getObras() {
-        return obras;
-    }
-
-    public void setObras(ArrayList<Obra> obras) {
-        this.obras = obras;
+    // Para agregar una obra al artista
+    public void agregarObra(Obra obra) {
+        this.obras.agregarObra(obra);
     }
 }
-     
-  

@@ -1,85 +1,42 @@
-public class Obra{
-    private String title;
-    private Artista autor;                                                                             
-    private int year;
-    private double cost;
-    private String status;
+public class Obra {
+    private String titulo;
+    private Artista autor;
+    private int año;
+    private double costo;
+    private String estado;
 
-    
-    /*---------------------------------METODO CONSTRUCTOR---------------------------------*/
-    public Obra(String title, Artista autor, int year, double cost, String status) {
-        this.title = title;
+    public Obra(String titulo, Artista autor, int año, double costo, String estado) {
+        this.titulo = titulo;
         this.autor = autor;
-        this.year = year;
-        this.cost = cost;
-        this.status = status;
+        this.año = año;
+        this.costo = costo;
+        this.estado = estado;
     }
 
-    /*---------------------------------SETTERS Y GETTERS----------------------------------*/
-    public String getTitle(){
-        return title;
-    }
+    // Getters y setters igual que antes
+    public String getTitle(){ return titulo; }
+    public void setTitle(String title){ this.titulo = title; }
+    public Artista getAutor(){ return autor; }
+    public void setAutor(Artista autor){ this.autor = autor; }
+    public int getYear(){ return año; }
+    public void setYear(int year){ this.año = year; }
+    public double getCost(){ return costo; }
+    public void setCost(double cost){ this.costo = cost; }
+    public String getStatus(){ return estado; }
+    public void setStatus(String status){ this.estado = estado; }
 
-    public void setTitle(String title){
-        this.title = title;
-    }
-
-    public Artista getAutor(){
-        return autor;
-    }
-    public void setAutor(Artista autor){
-        this.autor = autor;
-    }
-
-    public int getYear(){
-        return year;
-    }
-
-    public void setYear(int year){
-        this.year = year;
-    }
-
-    public double getCost(){
-        return cost;
-    }
-
-    public void setCost(double cost){
-        this.cost = cost;
-    }
-
-    public String getStatus(){
-        return status;
-    }
-
-    public void setStatus(String status){
-        this.status = status;
-    }
-    /*----------------------------------------------------------------------------------------*/
-
-    
-    /*---------------------------------METODOS IMPLEMENTADOS---------------------------------*/
-    public void mostrarDatosObras() {
-        System.out.println("Datos de la Obra ");
-        System.out.println("Titulo: " + this.title);
+    // Método original, muestra los datos de la obra
+    public void mostrarDatosObra() {
+        System.out.println("Título: " + this.titulo);
         System.out.println("Artista: " + this.autor.getNombre());
-        System.out.println("Año: " + this.year);
-        System.out.println("Costo: $" + this.cost);
-        System.out.println("Estado: " + this.status);
+        System.out.println("Año: " + this.año);
+        System.out.println("Costo: $" + this.costo);
+        System.out.println("Estado: " + this.estado);
     }
-    /*--------------------------------------------------------------------------------------------*/
-    
-    /*---------------------------------SOBRECARGA DE METODO---------------------------------------*/
-    /*Metodo que me permite mostrar los datos solo de las obras que tengan el mismo estado que el de pasado como parametro(status)*/
-    public void mostrarDatosObras(String status){
-        if(this.status.equals(status)){
-            System.out.println("Datos de la Obra ");
-            System.out.println("Titulo: " + this.title);
-            System.out.println("Artista: " + this.autor.getNombre());
-            System.out.println("Año: " + this.year);
-            System.out.println("Costo: $" + this.cost);
-            System.out.println("Estado: " + this.status);
+    // Sobrecarga para mostrar solo si coincide status
+    public void mostrarDatosObra(String status){
+        if(this.estado.equals(status)){
+            mostrarDatosObra();
         }
     }
-    /*------------------------------------------------------------------------------------------*/
 }
-
