@@ -17,7 +17,12 @@ public class ListaExposiciones {
         return mapaNombre.get(nombre);
     }
     public ArrayList<Exposicion> getExposiciones() {
-        return exposiciones;
+        //se retorna una lista copia de la original para no romper el principio del encapsulamiento
+        return new ArrayList<>(exposiciones);
+    }
+    public void setExposiciones(ArrayList<Exposicion> exposiciones){
+        //se crea un arraylist copia de la pasada por parametro y luego se asigna a la original para no romper el encapsulamiento
+        this.exposiciones = new ArrayList<>(exposiciones);
     }
     // Muestra todas las exposiciones y sus obras
     public void mostrarExposiciones() {

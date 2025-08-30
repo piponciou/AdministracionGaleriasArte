@@ -10,9 +10,14 @@ public class ListaObras {
     public void agregarObra(Obra obra) {
         obras.add(obra);
     }
+    
     public ArrayList<Obra> getObras() {
     return new ArrayList<>(obras); // copia defensiva
 }
+    public void setObras(ArrayList<Obra> obras){
+        this.obras = new ArrayList<>(obras);
+    }
+    
     // Muestra todas las obras de la lista
     public void mostrarTodasObras() {
     for (int i = 0; i < obras.size(); i++) {

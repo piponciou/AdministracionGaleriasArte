@@ -17,7 +17,13 @@ public class ListaArtistas {
         return mapaRut.get(rut);
     }
     public ArrayList<Artista> getArtistas() {
-        return artistas;
+        //se retorna una copia del arraylist original
+        return new ArrayList<>(artistas);
+    }
+    
+    public void setArtistas(ArrayList<Artista> artistas){
+        //se crea una copia del arraylist y se le asigna a la original
+        this.artistas = new ArrayList<>(artistas);
     }
     // Muestra todos los artistas
     public void mostrarArtistas() {
