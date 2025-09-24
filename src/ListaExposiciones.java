@@ -9,6 +9,7 @@ public class ListaExposiciones {
         exposiciones = new ArrayList<>();
         mapaNombre = new HashMap<>();
     }
+
     public void agregarExposicion(Exposicion exposicion) {
         exposiciones.add(exposicion);
         mapaNombre.put(exposicion.getNombreExposicion(), exposicion);

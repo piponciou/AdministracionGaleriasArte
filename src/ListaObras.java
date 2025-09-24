@@ -7,6 +7,11 @@ public class ListaObras {
     public ListaObras() {
         this.obras = new ArrayList<>();
     }
+    
+    public ListaObras(ListaObras obras) {
+        this.obras = new ArrayList<>(obras.obras);
+    }
+    
     public void agregarObra(Obra obra) {
         obras.add(obra);
     }
@@ -15,7 +20,7 @@ public class ListaObras {
     return new ArrayList<>(obras); // copia defensiva
 }
     public void setObras(ArrayList<Obra> obras){
-        this.obras = new ArrayList<>(obras);
+        this.obras = new ArrayList<>(obras); //copia defensiva
     }
     
     // Muestra todas las obras de la lista

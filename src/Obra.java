@@ -13,11 +13,20 @@ public class Obra {
         this.estado = estado;
     }
 
-    // Getters y setters igual que antes
+ 
     public String getTitle(){ return titulo; }
     public void setTitle(String title){ this.titulo = title; }
-    public Artista getAutor(){ return autor; }
-    public void setAutor(Artista autor){ this.autor = autor; }
+    
+    
+    public Artista getAutor(){ 
+        return new Artista(this.autor); 
+    }
+    public void setAutor(Artista autor){
+        this.autor = new Artista(autor); 
+    }
+    
+    
+    
     public int getYear(){ return año; }
     public void setYear(int year){ this.año = year; }
     public double getCost(){ return costo; }

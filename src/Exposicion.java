@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 public class Exposicion {
     private String nombreExposicion;
     private String fechaInicio;
@@ -20,8 +23,13 @@ public class Exposicion {
     public void setFechaTermino(String fechaTermino) { this.fechaTermino = fechaTermino; }
     public String getLugar() { return lugar; }
     public void setLugar(String lugar) { this.lugar = lugar; }
-    public ListaObras getObrasExpuestas() { return obrasExpuestas; }
-    public void setObrasExpuestas(ListaObras obrasExpuestas) { this.obrasExpuestas = obrasExpuestas; }
+    
+    public ListaObras getObrasExpuestas() {
+        return new ListaObras(this.obrasExpuestas); //copia defensiva
+    }
+    public void setObrasExpuestas(ListaObras obrasExpuestas) { 
+        this.obrasExpuestas = new ListaObras(obrasExpuestas); //copia defensiva
+    }
 
     // Para agregar una obra a la exposición
     public void agregarObra(Obra obra) {
