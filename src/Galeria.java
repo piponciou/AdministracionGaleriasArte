@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+
 
 public class Galeria {
     private ListaArtistas artistas;
@@ -35,6 +37,17 @@ public class Galeria {
     public void mostrarExposiciones() {
         exposiciones.mostrarExposiciones();
     }
+    
+    //getter de ArrayList de artistas y exposiciones
+    public ArrayList<Artista> getArrayListArtista(){
+        return artistas.getArtistas();
+    }
+    
+    public ArrayList<Exposicion> getArrayListExposicion(){
+        return exposiciones.getExposiciones();
+    }
+    
+    
 
     public void menu() throws IOException {
         BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));

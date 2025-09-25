@@ -9,6 +9,8 @@ public class ListaArtistas {
         artistas = new ArrayList<>();
         mapaRut = new HashMap<>();
     }
+   
+    
     public void agregarArtista(Artista artista) {
         artistas.add(artista);
         mapaRut.put(artista.getRut(), artista);
