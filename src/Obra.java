@@ -32,7 +32,7 @@ public class Obra {
     public double getCost(){ return costo; }
     public void setCost(double cost){ this.costo = cost; }
     public String getStatus(){ return estado; }
-    public void setStatus(String status){ this.estado = estado; }
+    public void setStatus(String status){ this.estado = status; }
 
     // Método original, muestra los datos de la obra
     public void mostrarDatosObra() {
