@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
 
-
 public class Galeria {
     private ListaArtistas artistas;
     private ListaExposiciones exposiciones;
@@ -9,6 +8,41 @@ public class Galeria {
     public Galeria() {
         artistas = new ListaArtistas();
         exposiciones = new ListaExposiciones();
+    }
+    
+    //DEL REQUERIMIENTO 2.2
+    // Método para cargar artistas y obras
+    public void cargarDatos() {
+        try {
+            ArrayList<Artista> listaArt = GestorArchivos.cargarArtistas("artistas.csv");
+            artistas = new ListaArtistas();
+            artistas.setArtistas(listaArt); // asigna la lista cargada
+
+            ArrayList<Obra> listaObras = GestorArchivos.cargarObras("obras.csv", artistas.getArtistas());
+            for (Obra obra : listaObras) {
+                Artista autor = artistas.buscarPorRut(obra.getAutor().getRut());
+                if (autor != null) {
+                    autor.agregarObra(obra); // enlaza obra con artista
+                }
+            }
+        }catch (IOException e) {
+            System.out.println("Error cargando datos: " + e.getMessage());
+        }
+    }
+
+    // Método para guardar artistas y obras
+    public void guardarDatos() {
+        try {
+            GestorArchivos.guardarArtistas(artistas.getArtistas(), "artistas.csv");
+
+            ArrayList<Obra> todasObras = new ArrayList<>();
+            for (Artista artista : artistas.getArtistas()) {
+                todasObras.addAll(artista.getObras().getObras());
+            }
+            GestorArchivos.guardarObras(todasObras, "obras.csv");
+        } catch (IOException e) {
+            System.out.println("Error guardando datos: " + e.getMessage());
+        }
     }
 
     public void agregarArtista(Artista artista) {
@@ -47,7 +81,37 @@ public class Galeria {
         return exposiciones.getExposiciones();
     }
     
-    
+    //FUNCIONES NUEVAS DE REQUERIMIENTO 2.4
+    // Editar estado de una obra asociada a un artista
+    public void editarEstadoObraDeArtista(String rutArtista, String tituloObra, String nuevoEstado) {
+        Artista artista = buscarArtistaPorRut(rutArtista);
+        if (artista != null) {
+            Obra obra = (artista.getObras()).buscarPorTitulo(tituloObra);
+            if (obra != null) {
+                obra.setStatus(nuevoEstado);
+                System.out.println("Estado de obra actualizado correctamente.");
+            } else {
+                System.out.println("No se encontró la obra con título: " + tituloObra);
+            }
+        } else {
+            System.out.println("No se encontró al artista con rut: " + rutArtista);
+        }
+    }
+
+    // Eliminar una obra de una exposición
+    public void eliminarObraDeExposicion(String nombreExposicion, String tituloObra) {
+        Exposicion exposicion = buscarExposicionPorNombre(nombreExposicion);
+        if (exposicion != null) {
+            boolean eliminado = exposicion.getObrasExpuestas().eliminarObraPorTitulo(tituloObra);
+            if (eliminado) {
+                System.out.println("Obra eliminada correctamente de la exposición.");
+            } else {
+                System.out.println("No se encontró la obra con título: " + tituloObra + " en la exposición.");
+            }
+        } else {
+            System.out.println("No se encontró la exposición con nombre: " + nombreExposicion);
+        }
+    }
 
     public void menu() throws IOException {
         BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));

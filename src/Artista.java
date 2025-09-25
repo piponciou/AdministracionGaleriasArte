@@ -1,39 +1,33 @@
-public class Artista {
-    private String rut;
-    private String nombre;
-    private int edad;
-    // CAMBIO IMPORTANTE: ahora tiene ListaObras, no ArrayList
+// Clase Artista que hereda Persona y añade obras
+public class Artista extends Persona {
     private ListaObras obras;
 
     public Artista(String rut, String nombre, int edad) {
-        this.rut = rut;
-        this.nombre = nombre;
-        this.edad = edad;
-        this.obras = new ListaObras();
-    }
-    public Artista(Artista artista){
-        this.rut = artista.getRut();
-        this.nombre = artista.getNombre();
-        this.edad = artista.getEdad();
-        this.obras = artista.getObras();
-    }
-    // Getters y setters igual que antes, sólo cambia el tipo para obras
-    public String getRut() { return rut; }
-    public void setRut(String rut) { this.rut = rut; }
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
-    public int getEdad() { return edad; }
-    public void setEdad(int edad) { this.edad = edad; }
-    
-    public ListaObras getObras() {
-        return new ListaObras(this.obras);//copia defensiva 
-    }
-    public void setObras(ListaObras obras) { 
-        this.obras = new ListaObras(obras); //copia defensiva
+        super(rut, nombre, edad);
+        obras = new ListaObras();
     }
 
-    // Para agregar una obra al artista
+    public Artista(Artista artista) {
+        super(artista.getRut(), artista.getNombre(), artista.getEdad());
+        this.obras = new ListaObras(artista.getObras());
+    }
+
+    public ListaObras getObras() {
+        return new ListaObras(obras); // copia defensiva
+    }
+
+    public void setObras(ListaObras obras) {
+        this.obras = new ListaObras(obras); // copia defensiva
+    }
+
     public void agregarObra(Obra obra) {
         this.obras.agregarObra(obra);
+    }
+
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
+        System.out.println("Obras del artista:");
+        obras.mostrarTodasObras();
     }
 }
