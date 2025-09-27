@@ -12,7 +12,11 @@ public class Obra {
         this.costo = costo;
         this.estado = estado;
     }
+    public Obra(String titulo) {
+        this.titulo = titulo;
+    }
 
+    
  
     public String getTitle(){ return titulo; }
     public void setTitle(String title){ this.titulo = title; }

@@ -14,6 +14,7 @@ public class Exposicion {
         this.lugar = lugar;
         this.obrasExpuestas = new ListaObras();
     }
+
     public String getNombreExposicion() { return nombreExposicion; }
     public void setNombreExposicion(String nombreExposicion) { this.nombreExposicion = nombreExposicion; }
     public String getFechaInicio() { return fechaInicio; }

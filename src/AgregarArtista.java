@@ -118,8 +118,8 @@ public class AgregarArtista extends javax.swing.JFrame {
        
         if(jTextField1.getText().trim().isEmpty() || jTextField2.getText().trim().isEmpty() || jTextField3.getText().trim().isEmpty()){
            JOptionPane.showMessageDialog(null,"Porfavor Ingrese todas las casillas!");
-       }
-       else{
+        }
+        else{
            //el .trim se utiliza para borrar los espacios
            String rut = jTextField1.getText().trim();
            String name = jTextField2.getText().trim();

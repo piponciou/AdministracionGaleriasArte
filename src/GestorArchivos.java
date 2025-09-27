@@ -113,4 +113,36 @@ public class GestorArchivos {
         campos.add(sb.toString());
         return campos.toArray(new String[0]);
     }
+    public static void guardarExposiciones(ArrayList<Exposicion> exposiciones, String filename) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(filename));
+        for (Exposicion exposicion : exposiciones) {
+            String linea = String.join(",",
+                escapeCsv(exposicion.getNombreExposicion()),
+                escapeCsv(exposicion.getFechaInicio()),
+                escapeCsv(exposicion.getFechaTermino()),
+                escapeCsv(exposicion.getLugar())
+            );
+            bw.write(linea);
+            bw.newLine();
+        }
+        bw.close();
+    }
+
+
+    public static ArrayList<Exposicion> cargarExposiciones(String filename) throws IOException {
+        ArrayList<Exposicion> exposiciones = new ArrayList<>();
+        ArrayList<String> lineas = (ArrayList<String>) Files.readAllLines(Paths.get(filename));
+        for (String linea : lineas) {
+            String[] datos = parseCsvLine(linea);
+            String nombre = datos[0];
+            String fechaInicio = datos[1];
+            String fechaTermino = datos[2];
+            String lugar = datos[3];
+            Exposicion exposicion = new Exposicion(nombre, fechaInicio, fechaTermino, lugar);
+            exposiciones.add(exposicion);
+        }
+        return exposiciones;
+}
+
+    
 }

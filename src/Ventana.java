@@ -45,6 +45,7 @@ public class Ventana extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
         jMenu16 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -121,6 +122,14 @@ public class Ventana extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem4);
 
+        jMenuItem5.setText("Agregar Exposicion");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem5);
+
         jMenuBar1.add(jMenu7);
 
         jMenu16.setText("Mostrar");
@@ -189,12 +198,16 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
+        new ListadoExposiciones(galery.getArrayListExposicion()).setVisible(true);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         new ListadoArtistas(galery.getArrayListArtista()).setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        new AgregarExposicion(galery).setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame jFrame1;
@@ -212,6 +225,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
