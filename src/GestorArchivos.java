@@ -65,8 +65,8 @@ public class GestorArchivos {
         ArrayList<String> lineas = (ArrayList<String>) Files.readAllLines(Paths.get(filename));
         for (String linea : lineas) {
             String[] datos = parseCsvLine(linea);
-            String rut = datos[0];
-            String nombre = datos[1];
+            String nombre = datos[0];
+            String rut = datos[1];
             int edad = Integer.parseInt(datos[2]);
             Artista artista = new Artista(rut, nombre, edad);
             artistas.add(artista);
