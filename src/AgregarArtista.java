@@ -121,8 +121,8 @@ public class AgregarArtista extends javax.swing.JFrame {
        }
        else{
            //el .trim se utiliza para borrar los espacios
-           String name = jTextField1.getText().trim();
-           String rut = jTextField2.getText().trim();
+           String rut = jTextField1.getText().trim();
+           String name = jTextField2.getText().trim();
            int edad = 0;
            
             //Se valida que la edad ingresada sea valida
@@ -131,7 +131,7 @@ public class AgregarArtista extends javax.swing.JFrame {
                edad = Integer.parseInt(texto);
            }catch(NumberFormatException e){
                JOptionPane.showMessageDialog(null,"la edad ingresada no es valida!");
-               
+               return;
            }
            
            Artista agregar = new Artista(rut,name,edad);

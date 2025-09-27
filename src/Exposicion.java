@@ -52,4 +52,9 @@ public class Exposicion {
         System.out.println("Obras expuestas con estado " + status + ":");
         obrasExpuestas.mostrarObrasPorEstado(status);
     }
+    //REQUIRIMIENTO 2.5, ya teniendo la exposicion llama a la funcion
+    
+    public ArrayList<Obra> filtrarObrasPorEstado(String estado) {
+        return obrasExpuestas.filtrarPorEstado(estado);
+    }
 }
