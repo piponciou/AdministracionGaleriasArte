@@ -55,6 +55,15 @@ public class Galeria {
         Artista artista = buscarArtistaPorRut(rut);
         if (artista != null) artista.agregarObra(obra);
     }
+    
+    //sobreescritura de metodo recien implementada
+    public void agregarObraAArtista(Artista artista, Obra obra) {
+        if (artista != null){
+            artista.agregarObra(obra);
+        }else{
+            System.out.println("ERROR");   
+        }
+    }
     public void mostrarArtistas() {
         artistas.mostrarArtistas();
     }

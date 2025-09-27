@@ -1,12 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-/**
- *
- * @author pipea
- */
+//esta ventana en teoria la tenemos que borrar ya que no se utiliza
 public class BuscarArtistaPorRut extends javax.swing.JFrame {
 
     /**
@@ -98,7 +90,7 @@ public class BuscarArtistaPorRut extends javax.swing.JFrame {
         
        //aca se hacen todas las validaciones de que exista el artista y tambien se le deberia de pasar el artista a la ventana AgregarObra
        //luego de hacer todas las validaciones se redirige a la ventana AgregarObra
-       new AgregarObra().setVisible(true);
+      // new AgregarObra().setVisible(true);
        
     }//GEN-LAST:event_jButton1ActionPerformed
 

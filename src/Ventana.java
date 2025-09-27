@@ -1,15 +1,28 @@
+
+import javax.swing.JFrame;
+
 public class Ventana extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Ventana
-     */
     Galeria galery ;
     
     public Ventana() {
         initComponents();
         galery = new Galeria();
         galery.cargarDatos();
+        
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.addWindowListener(new java.awt.event.WindowAdapter() {
+        @Override
+        public void windowClosing(java.awt.event.WindowEvent e) {
+            galery.guardarDatos();  
+            System.exit(0); 
+            }
+        });
+
+              
     }
+    
+
     
   
     @SuppressWarnings("unchecked")
@@ -173,6 +186,7 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         System.exit(0);
+        galery.guardarDatos();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
     
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
@@ -188,11 +202,11 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        new BuscarArtistaPorRut().setVisible(true);
+        new AgregarObra(galery).setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        new BuscarExposiciones().setVisible(true);
+        new BuscarExposiciones(galery).setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
@@ -224,7 +238,7 @@ public class Ventana extends javax.swing.JFrame {
     private java.awt.Menu menu2;
     private java.awt.MenuBar menuBar1;
     // End of variables declaration//GEN-END:variables
-    
+
 }
 
 
