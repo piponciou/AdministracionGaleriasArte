@@ -6,7 +6,7 @@ public class GestorArchivos {
 
     // Guarda lista de obras en archivo CSV
     public static void guardarObras(ArrayList<Obra> obras, String filename) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(filename));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(filename, true));
         for (Obra obra : obras) {
             String linea = String.join(",",
                 escapeCsv(obra.getTitle()),
@@ -27,6 +27,7 @@ public class GestorArchivos {
         ArrayList<String> lineas = (ArrayList<String>) Files.readAllLines(Paths.get(filename));
         for (String linea : lineas) {
             String[] datos = parseCsvLine(linea);
+            if (datos.length < 5) continue;
             String titulo = datos[0];
             String rutAutor = datos[1];
             int anio = Integer.parseInt(datos[2]);
