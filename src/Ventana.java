@@ -180,9 +180,9 @@ public class Ventana extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu16);
 
-        jMenu3.setText("Extra");
+        jMenu3.setText("Buscar");
 
-        jMenuItem6.setText("Menu Exposicion");
+        jMenuItem6.setText("Buscar Artista");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
@@ -230,7 +230,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        new BuscarExposiciones(galery).setVisible(true);
+        new buscarArtistaPorRut(galery).setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
