@@ -22,7 +22,7 @@ public class buscarArtistaPorRut extends javax.swing.JFrame {
             Artista pp = artistas.get(j);
             nombRutArtistas[j] = pp.getNombre() + ", " + pp.getRut();
         }
-         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(nombRutArtistas));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(nombRutArtistas));
     }
 
     @SuppressWarnings("unchecked")
@@ -50,20 +50,20 @@ public class buscarArtistaPorRut extends javax.swing.JFrame {
         jTable1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Nombre", "Autor", "Costo", "Año", "Estado"
+                "Nombre", "RUT", "Edad", "Obras"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {

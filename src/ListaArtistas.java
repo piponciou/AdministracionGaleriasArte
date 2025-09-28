@@ -13,10 +13,14 @@ public class ListaArtistas {
     
     public void agregarArtista(Artista artista) {
         artistas.add(artista);
-        mapaRut.put(artista.getRut(), artista);
+        //basicamente se hace esto por que al momento de buscar el rut hay problemas con el "." y "-" del rut, por lo que se guarda en el hashMap sin eso
+        String rutNormalizado = artista.getRut().replaceAll("[.\\-\\s]", "").toLowerCase();
+        mapaRut.put(rutNormalizado, artista);
     }
     public Artista buscarPorRut(String rut) {
-        return mapaRut.get(rut);
+        //se formatea el rut para dejarlo sin puntos y guion y asi poder buscarlo en el hashMap correctamente
+        String rutNormalizado = rut.replaceAll("[.\\-\\s]", "").toLowerCase();
+        return mapaRut.get(rutNormalizado);
     }
     public ArrayList<Artista> getArtistas() {
         //se retorna una copia del arraylist original
