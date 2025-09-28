@@ -21,11 +21,10 @@ public class ListaObras {
     public boolean agregarObra(Obra obra) {
         String titulo = obra.getTitle();
         if (mapaObras.containsKey(titulo)) {
-            return false; // Ya existe una obra con ese título
+            throw new IllegalArgumentException("Ya existe una obra con el título: " + titulo);
         }
         obras.add(obra);
         mapaObras.put(titulo, obra);
-        
         return true;
     }
 
@@ -72,13 +71,13 @@ public class ListaObras {
 
     //Requerimiento  2.4
     // Modificar el estado de una obra identificada por título
-    public boolean modificarEstadoObra(String titulo, String nuevoEstado) {
+    public boolean modificarEstadoObra(String titulo, String nuevoEstado) throws ObraNoEncontradaException{
         Obra obra = mapaObras.get(titulo);
         if (obra != null) {
             obra.setStatus(nuevoEstado);
             return true; // Modificado con éxito
         }
-        return false; // Obra no encontrada
+        throw new ObraNoEncontradaException("Obra no encontrada con título: " + titulo);
     }
     //REQUERIMIENTO 2.5
     public ArrayList<Obra> filtrarPorEstado(String estado) {
@@ -89,6 +88,15 @@ public class ListaObras {
             }
         }
         return resultado;
+    }
+    //Requirimiento 2.10, se llama desde ListaArtistas en ObrasCSV()
+    
+    public ArrayList<String> obtenerObrasCSV() {
+        ArrayList<String> docCSV = new ArrayList<>();
+        for (int i = 0; i < obras.size(); i++) {
+            docCSV.add(obras.get(i).reporteCSVObras());
+        }
+        return docCSV;
     }
 
 }

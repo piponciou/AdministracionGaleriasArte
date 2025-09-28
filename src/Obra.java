@@ -12,11 +12,7 @@ public class Obra {
         this.costo = costo;
         this.estado = estado;
     }
-    public Obra(String titulo) {
-        this.titulo = titulo;
-    }
 
-    
  
     public String getTitle(){ return titulo; }
     public void setTitle(String title){ this.titulo = title; }
@@ -52,4 +48,9 @@ public class Obra {
             mostrarDatosObra();
         }
     }
+    //Requerimiento 2.10 se llama desde ListaObras en obtenerObrasCSV()
+    public String reporteCSVObras() {
+        return titulo + "|" + autor.getNombre() + "|" + autor.getRut() + "|" + año + "|" + costo + "|" + estado;
+    }
+
 }

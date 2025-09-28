@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Galeria {
     private ListaArtistas artistas;
     private ListaExposiciones exposiciones;
-
+    
     public Galeria() {
         artistas = new ListaArtistas();
         exposiciones = new ListaExposiciones();
@@ -108,6 +108,7 @@ public void guardarDatos() {
         return exposiciones.getExposiciones();
     }
     
+    
     //FUNCIONES NUEVAS DE REQUERIMIENTO 2.4
     // Editar estado de una obra asociada a un artista
     public void editarEstadoObraDeArtista(String rutArtista, String tituloObra, String nuevoEstado) throws ArtistaNoEncontradoException{
@@ -135,6 +136,10 @@ public void guardarDatos() {
         exposicion.getObrasExpuestas().eliminarObraPorTitulo(tituloObra);
         System.out.println("Obra eliminada correctamente de la exposición.");
 }
+     public boolean eliminarArtistaPorRut(String rut) throws ArtistaNoEncontradoException{
+        return (artistas.eliminarArtistaPorRut(rut));
+     }
+    
 
     
 }

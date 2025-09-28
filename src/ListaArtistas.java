@@ -6,10 +6,9 @@ public class ListaArtistas {
     private HashMap<String, Artista> mapaRut;
 
     public ListaArtistas() {
-        artistas = new ArrayList<>();
-        mapaRut = new HashMap<>();
+        this.artistas = new ArrayList<>();
+        this.mapaRut = new HashMap<>();
     }
-   
     
     public void agregarArtista(Artista artista) {
         artistas.add(artista);
@@ -41,4 +40,34 @@ public class ListaArtistas {
             System.out.println("-----------------------");
         }
     }
+    //requirimiento 2.10 que se llama desde galeria reporteArchivoFinal()
+    public ArrayList<String> ObrasCSV() {
+        ArrayList<String> obA = new ArrayList<>();
+        for (int i = 0; i < artistas.size(); i++) {
+            obA.addAll(artistas.get(i).getObras().obtenerObrasCSV());
+        }
+        return obA;
+    }
+    //Requerimiento 2.12: eliminar elementos de la 1ra colecciÃ³n o nivel.
+
+    public boolean eliminarArtistaPorRut(String rut) throws ArtistaNoEncontradoException {
+        String rutNormalizado = rut.replaceAll("[.\\-\\s]", "").toLowerCase();
+        Artista artista = mapaRut.remove(rutNormalizado);
+        System.out.println("rut" + artista.getRut());
+        if (artista != null) {
+            artistas.remove(artista);
+            return true;
+        }
+        throw new ArtistaNoEncontradoException("Artista con RUT " + rutNormalizado + " no encontrado");
+    }
+    
+    /*ESTO VA EN LA VENTANA
+    try {
+        galeria.eliminarArtistaPorRut(rut);
+        mostrarMensaje("Artista eliminado");
+    } catch (ArtistaNoEncontradoException e) {
+        mostrarError(e.getMessage());
+    }
+      */
+    
 }

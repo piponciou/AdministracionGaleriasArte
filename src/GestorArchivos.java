@@ -65,7 +65,14 @@ public class GestorArchivos {
         ArrayList<Artista> artistas = new ArrayList<>();
         ArrayList<String> lineas = (ArrayList<String>) Files.readAllLines(Paths.get(filename));
         for (String linea : lineas) {
+            if (linea.trim().isEmpty()) continue; // Ignorar líneas vacías
+
             String[] datos = parseCsvLine(linea);
+            if (datos.length < 3) { 
+                System.out.println("Línea inválida en artistas: " + linea);
+                continue;
+            }
+
             String rut = datos[0];
             String nombre = datos[1];
             int edad = Integer.parseInt(datos[2]);
@@ -74,6 +81,7 @@ public class GestorArchivos {
         }
         return artistas;
     }
+
 
     // Encuentra artista por rut en lista
     private static Artista encontrarArtistaPorRut(ArrayList<Artista> artistas, String rut) {
