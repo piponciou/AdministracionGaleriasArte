@@ -14,14 +14,14 @@ public class ListaExposiciones {
         exposiciones.add(exposicion);
         mapaNombre.put(exposicion.getNombreExposicion(), exposicion);
     }
-    public Exposicion buscarPorNombre(String nombre) {
-        String nombreNormalizado = nombre.trim();
+    public Exposicion buscarPorNombre(String nombre) throws Exception{
+        String nombreNormalizado = nombre.trim();//elimina todos los caracteres de espacio en blanco
         for (Exposicion exposicion : exposiciones) {
             if (exposicion.getNombreExposicion().trim().equalsIgnoreCase(nombreNormalizado)) {
                 return exposicion;
             }
         }
-        return null;
+        throw new Exception("Exposición no encontrada con nombre: " + nombre);
     }
 
     public ArrayList<Exposicion> getExposiciones() {

@@ -125,8 +125,7 @@ public class EliminarObraDeExposicion extends javax.swing.JFrame {
             Logger.getLogger(EliminarObraDeExposicion.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "No se encontró la obra para eliminar.");
         }
-
-
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed

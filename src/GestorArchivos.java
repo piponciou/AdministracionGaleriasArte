@@ -181,26 +181,35 @@ public class GestorArchivos {
     }
 }
 
-    public static ArrayList<Exposicion> cargarExposiciones(String filename) throws IOException {
+    public static ArrayList<Exposicion> cargarExposiciones(String filename) throws IOException, Exception, FileNotFoundException {
         ArrayList<Exposicion> exposiciones = new ArrayList<>();
-        ArrayList<String> lineas = (ArrayList<String>) Files.readAllLines(Paths.get(filename));
-        for (String linea : lineas) {
-            if(linea.trim().isEmpty())continue;//se ignoran las lineas vacias
-            
-            String[] datos = parseCsvLine(linea);
-            if(datos.length < 4){
-                System.out.println("Linea invalida en exposiciones.csv :"+linea);
-                continue;
+        try {
+            ArrayList<String> lineas = null;
+            try {
+                Path path = Paths.get(filename);
+                lineas = (ArrayList<String>) Files.readAllLines(path);
+            } catch (IOException e) {
+                throw new Exception("No se pudo cargar archivo exposiciones: " + e.getMessage()); 
             }
-            String nombre = datos[0];
-            String fechaInicio = datos[1];
-            String fechaTermino = datos[2];
-            String lugar = datos[3];
-            Exposicion exposicion = new Exposicion(nombre, fechaInicio, fechaTermino, lugar);
-            exposiciones.add(exposicion);
+            
+            for (String linea : lineas) {
+                if(linea.trim().isEmpty()) continue;//se ignoran las lineas vacias
+
+                String[] datos = parseCsvLine(linea);
+                if(datos.length < 4){
+                    System.out.println("Linea invalida en exposiciones.csv :"+linea);
+                    continue;
+                }
+                String nombre = datos[0];
+                String fechaInicio = datos[1];
+                String fechaTermino = datos[2];
+                String lugar = datos[3];
+                Exposicion exposicion = new Exposicion(nombre, fechaInicio, fechaTermino, lugar);
+                exposiciones.add(exposicion);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Error cargando datos: " + e.getMessage());
         }
         return exposiciones;
-}
-
-    
+    }
 }

@@ -6,19 +6,23 @@ public class Ventana extends javax.swing.JFrame {
     Galeria galery ;
     
     public Ventana() {
-        initComponents();
-        galery = new Galeria();
-        galery.cargarDatos();
-        
-        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        this.addWindowListener(new java.awt.event.WindowAdapter() {
-        @Override
-        public void windowClosing(java.awt.event.WindowEvent e) {
-            galery.guardarDatos();  
-            System.exit(0); 
-            }
-        });
+        try {
+            initComponents();
+            galery = new Galeria();
+            galery.cargarDatos();
 
+            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+            this.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent e) {
+                galery.guardarDatos();  
+                System.exit(0); 
+                }
+            });
+        } catch (Exception e) {
+            System.out.println("Error al llamar Ventana: " + e.getMessage());
+            System.exit(1);
+        }
               
     }
     

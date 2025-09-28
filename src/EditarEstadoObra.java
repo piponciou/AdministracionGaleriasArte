@@ -172,7 +172,7 @@ public class EditarEstadoObra extends javax.swing.JFrame {
                 return;
             }
             JOptionPane.showMessageDialog(null ,"MODIFICADO CON EXITO");
-            
+            dispose();
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed

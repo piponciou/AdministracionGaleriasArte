@@ -28,6 +28,7 @@ public class ListaObras {
         return true;
     }
 
+    
     public ArrayList<Obra> getObras() {
         return new ArrayList<>(obras); // copia defensiva
     }
