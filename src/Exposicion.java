@@ -58,4 +58,8 @@ public class Exposicion {
     public ArrayList<Obra> filtrarObrasPorEstado(String estado) {
         return obrasExpuestas.filtrarPorEstado(estado);
     }
+    
+    public void eliminarObra(String titulo) throws ObraNoEncontradaException {
+        this.obrasExpuestas.eliminarObraPorTitulo(titulo);
+    }
 }

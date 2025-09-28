@@ -133,12 +133,10 @@ public class Galeria {
             System.out.println("No se encontró la exposición con nombre: " + nombreExposicion);
             return;
         }
-        exposicion.getObrasExpuestas().eliminarObraPorTitulo(tituloObra);
+        exposicion.eliminarObra(tituloObra);
         System.out.println("Obra eliminada correctamente de la exposición.");
-}
-     public boolean eliminarArtistaPorRut(String rut) throws ArtistaNoEncontradoException{
-        return (artistas.eliminarArtistaPorRut(rut));
-     }
+    }
+
     //REQUISITO 2.10
     public void reporteArchivoFinal() {
         String archivoObras = "ReporteDeLasObras.txt";
@@ -160,6 +158,10 @@ public class Galeria {
         } catch (IOException e) {
             System.out.println("Error al escribir el archivo: " + e.getMessage());
         }
+    }
+    
+    public boolean eliminarArtistaPorRut(String rut) throws ArtistaNoEncontradoException{
+        return artistas.eliminarArtistaPorRut(rut);
     }
 
     
