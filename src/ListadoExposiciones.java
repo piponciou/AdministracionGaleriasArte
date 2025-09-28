@@ -6,10 +6,11 @@ import javax.swing.table.DefaultTableModel;
 public class ListadoExposiciones extends javax.swing.JFrame {
 
     private ArrayList<Exposicion> exposiciones;
-    public ListadoExposiciones(ArrayList<Exposicion> exposiciones) {
+    private Galeria galery;
+    public ListadoExposiciones(Galeria galery) {
         initComponents();
-       
-        this.exposiciones = exposiciones;
+        this.galery = galery;
+        this.exposiciones = galery.getArrayListExposicion();
         /*LOGICA DE MOSTRAR LOS ARTISTAS EN LA LISTA*/
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);

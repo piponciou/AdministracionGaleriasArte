@@ -10,9 +10,11 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
     private Artista artistaSeleccionado;
     private ArrayList<Exposicion> exposiciones;
     private Exposicion exposicionSeleccionada;
+    private Obra obraSeleccionada;
+    private int indiceObraSeleccionada;
     
     public AgregarObraAExposicion(Galeria galery) {
-        initComponents();
+       initComponents();
        this.galery = galery;
        artistas = galery.getArrayListArtista();
        /* LOGICA PARA MOSTRAR LOS ARTISTAS COMO SELECCIONABLES EN LA VENTANA*/
@@ -33,32 +35,6 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(nombresExposiciones));
         /*-----------------------------------------------------------------------------*/
         
-        /*LOGICA PARA MOSTRAR LAS OBRAS DE ARTISTA SELECCIONADO*/       
-        int indice = jComboBox3.getSelectedIndex();
-        artistaSeleccionado = artistas.get(indice);
-        int tamaño = 0;
-        for(int c = 0; c<artistas.size();c++){
-            Artista pp = artistas.get(c);
-            if(pp.getRut().equals(artistaSeleccionado.getRut())){
-                ArrayList<Obra> obrasArtista = pp.getObras().getObras();
-                for(int x = 0; x<obrasArtista.size(); x++){
-                    tamaño ++;
-                }
-            }
-        }
-        String nombreObrasArtista[] = new String[tamaño];
-        /*rellenamos el vector*/
-        for(int q = 0; q<artistas.size();q++){
-            Artista pp = artistas.get(q);
-            if(pp.getRut().equals(artistaSeleccionado.getRut())){
-                ArrayList<Obra> obrasArtista = pp.getObras().getObras();
-                for(int w = 0; w<obrasArtista.size(); w++){
-                    Obra obra = obrasArtista.get(w);
-                    nombreObrasArtista[w] = obra.getTitle();
-                }
-            }
-        }
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(nombreObrasArtista));
     }
     
 
@@ -66,7 +42,6 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
@@ -80,10 +55,9 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
         jComboBox4 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DISPONIBLE", "VENDIDO", "PRESTADO" }));
 
         jButton1.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jButton1.setText("Agregar");
@@ -141,6 +115,17 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
         });
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -161,12 +146,12 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
                             .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(225, 225, 225)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -200,7 +185,7 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36))
@@ -211,41 +196,33 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        if(jTextField1.getText().isEmpty() || jTextField2.getText().trim().isEmpty() || jTextField3.getText().trim().isEmpty()){
+        if(jTextField1.getText().isEmpty() || jTextField2.getText().isEmpty() || jTextField3.getText().isEmpty()){
             JOptionPane.showMessageDialog(null,"Porfavor Ingrese todas las casillas!");
             return;
-        }
-        String titulo = jTextField1.getText();
-        String estado = jComboBox1.getSelectedItem().toString();
-        int año = 0;
-        double costo = 0;
-        int indice = jComboBox3.getSelectedIndex();
-        artistaSeleccionado = artistas.get(indice);
-
-        try{
-            String texto = jTextField2.getText().trim();
-            año = Integer.parseInt(texto);
-            texto = jTextField3.getText();
-            costo = Double.parseDouble(texto);
-
-        }catch(NumberFormatException e){
-
-            JOptionPane.showMessageDialog(null,"el año o costo ingresado no es valida!");
         }
         if (artistaSeleccionado == null) {
             JOptionPane.showMessageDialog(null, "Por favor seleccione un artista.");
         }
+        if(exposicionSeleccionada == null){
+            JOptionPane.showMessageDialog(null, "Por favor seleccione una exposicion.");
+        }
+        String titulo = obraSeleccionada.getTitle();
+        String estado = obraSeleccionada.getStatus();
+        int año = obraSeleccionada.getYear();
+        double costo = obraSeleccionada.getCost();
+      
 
         Obra oo = new Obra(titulo,artistaSeleccionado,año,costo,estado);
 
-        galery.agregarObraAArtista(artistaSeleccionado, oo);
+        galery.agregarObraAExposicion(exposicionSeleccionada.getNombreExposicion(), oo);
 
-        JOptionPane.showMessageDialog(null,"Obra agregado al artista con exito!");
+        JOptionPane.showMessageDialog(null,"Obra agregado la obra con exito a la Exposicion!");
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-
+        int i = jComboBox2.getSelectedIndex();
+        exposicionSeleccionada = galery.getArrayListExposicion().get(i);
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -283,11 +260,24 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
             }
         }
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(nombreObrasArtista));
+        
     }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        
+        indiceObraSeleccionada = jComboBox4.getSelectedIndex();
+        obraSeleccionada = artistaSeleccionado.getObras().getObras().get(indiceObraSeleccionada);
+        jTextField2.setText(Integer.toString(obraSeleccionada.getYear()));
+        jTextField3.setText(Double.toString(obraSeleccionada.getCost()));
+        jTextField1.setText(obraSeleccionada.getStatus());
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
@@ -298,6 +288,7 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables

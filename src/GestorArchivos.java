@@ -127,7 +127,51 @@ public class GestorArchivos {
         }
         bw.close();
     }
+    public static void guardarObrasExposicion(ArrayList<Exposicion> exposiciones, String filename) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(filename));
+        for (Exposicion exposicion : exposiciones) {
+            // Obtener obras expuestas
+            ArrayList<Obra> obras = exposicion.getObrasExpuestas().getObras();
+            for (Obra obra : obras) {
+                String linea = String.join(",",
+                    escapeCsv(exposicion.getNombreExposicion()),
+                    escapeCsv(obra.getTitle())
+                );
+                bw.write(linea);
+                bw.newLine();
+            }
+        }
+        bw.close();  
+    }
+    public static void cargarObrasExposicion(String filename, ArrayList<Exposicion> exposiciones, ArrayList<Obra> obras) throws IOException {
+    ArrayList<String> lineas = (ArrayList<String>) Files.readAllLines(Paths.get(filename));
+    for (String linea : lineas) {
+        String[] datos = parseCsvLine(linea);
+        if (datos.length < 2) continue;
+        String nombreExposicion = datos[0];
+        String tituloObra = datos[1];
 
+        // Buscar exposición y obra por nombre y título
+        Exposicion exposicion = null;
+        for (Exposicion exp : exposiciones) {
+            if (exp.getNombreExposicion().equals(nombreExposicion)) {
+                exposicion = exp;
+                break;
+            }
+        }
+        Obra obra = null;
+        for (Obra ob : obras) {
+            if (ob.getTitle().equals(tituloObra)) {
+                obra = ob;
+                break;
+            }
+        }
+
+        if (exposicion != null && obra != null) {
+            exposicion.agregarObra(obra);
+        }
+    }
+}
 
     public static ArrayList<Exposicion> cargarExposiciones(String filename) throws IOException {
         ArrayList<Exposicion> exposiciones = new ArrayList<>();

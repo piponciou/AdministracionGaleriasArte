@@ -18,20 +18,17 @@ public void cargarDatos() {
         artistas.setArtistas(listaArt);
 
         ArrayList<Obra> listaObras = GestorArchivos.cargarObras("obras.csv", artistas.getArtistas());
-        for (Obra obra : listaObras) {
-            Artista autor = artistas.buscarPorRut(obra.getAutor().getRut());
-            if (autor != null) {
-                autor.agregarObra(obra);
-            }
-        }
 
         ArrayList<Exposicion> listaExpos = GestorArchivos.cargarExposiciones("exposiciones.csv");
         exposiciones = new ListaExposiciones();
         exposiciones.setExposiciones(listaExpos);
 
-        System.out.println("✅ Datos cargados correctamente.");
+        // Cargar relación obras - exposiciones
+        GestorArchivos.cargarObrasExposicion("obras_exposicion.csv", exposiciones.getExposiciones(), listaObras);
+
+        System.out.println("Datos cargados correctamente.");
     } catch (IOException e) {
-        System.out.println("⚠️ Error cargando datos: " + e.getMessage());
+        System.out.println("Error cargando datos: " + e.getMessage());
     }
 }
 
@@ -49,12 +46,14 @@ public void guardarDatos() {
 
         GestorArchivos.guardarExposiciones(exposiciones.getExposiciones(), "exposiciones.csv");
 
-        System.out.println("✅ Datos guardados correctamente.");
+        // Guardar relación obras-exposiciones
+        GestorArchivos.guardarObrasExposicion(exposiciones.getExposiciones(), "obras_exposicion.csv");
+
+        System.out.println("Datos guardados correctamente.");
     } catch (IOException e) {
-        System.out.println("⚠️ Error guardando datos: " + e.getMessage());
+        System.out.println("Error guardando datos: " + e.getMessage());
     }
 }
-
     
     
     
