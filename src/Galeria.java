@@ -11,49 +11,49 @@ public class Galeria {
     }
     
    // Método para cargar artistas, obras y exposiciones desde archivos
-public void cargarDatos() {
-    try {
-        ArrayList<Artista> listaArt = GestorArchivos.cargarArtistas("artistas.csv");
-        artistas = new ListaArtistas();
-        artistas.setArtistas(listaArt);
+    public void cargarDatos() {
+        try {
+            ArrayList<Artista> listaArt = GestorArchivos.cargarArtistas("artistas.csv");
+            artistas = new ListaArtistas();
+            artistas.setArtistas(listaArt);
 
-        ArrayList<Obra> listaObras = GestorArchivos.cargarObras("obras.csv", artistas.getArtistas());
+            ArrayList<Obra> listaObras = GestorArchivos.cargarObras("obras.csv", artistas.getArtistas());
 
-        ArrayList<Exposicion> listaExpos = GestorArchivos.cargarExposiciones("exposiciones.csv");
-        exposiciones = new ListaExposiciones();
-        exposiciones.setExposiciones(listaExpos);
+            ArrayList<Exposicion> listaExpos = GestorArchivos.cargarExposiciones("exposiciones.csv");
+            exposiciones = new ListaExposiciones();
+            exposiciones.setExposiciones(listaExpos);
 
-        // Cargar relación obras - exposiciones
-        GestorArchivos.cargarObrasExposicion("obras_exposicion.csv", exposiciones.getExposiciones(), listaObras);
+            // Cargar relación obras - exposiciones
+            GestorArchivos.cargarObrasExposicion("obras_exposicion.csv", exposiciones.getExposiciones(), listaObras);
 
-        System.out.println("Datos cargados correctamente.");
-    } catch (IOException e) {
-        System.out.println("Error cargando datos: " + e.getMessage());
+            System.out.println("Datos cargados correctamente.");
+        } catch (IOException e) {
+            System.out.println("Error cargando datos: " + e.getMessage());
+        }
     }
-}
 
 
 // Método para guardar artistas, obras y exposiciones
-public void guardarDatos() {
-    try {
-        GestorArchivos.guardarArtistas(artistas.getArtistas(), "artistas.csv");
+    public void guardarDatos() {
+        try {
+            GestorArchivos.guardarArtistas(artistas.getArtistas(), "artistas.csv");
 
-        ArrayList<Obra> todasObras = new ArrayList<>();
-        for (Artista artista : artistas.getArtistas()) {
-            todasObras.addAll(artista.getObras().getObras());
+            ArrayList<Obra> todasObras = new ArrayList<>();
+            for (Artista artista : artistas.getArtistas()) {
+                todasObras.addAll(artista.getObras().getObras());
+            }
+            GestorArchivos.guardarObras(todasObras, "obras.csv");
+
+            GestorArchivos.guardarExposiciones(exposiciones.getExposiciones(), "exposiciones.csv");
+
+            // Guardar relación obras-exposiciones
+            GestorArchivos.guardarObrasExposicion(exposiciones.getExposiciones(), "obras_exposicion.csv");
+
+            System.out.println("Datos guardados correctamente.");
+        } catch (IOException e) {
+            System.out.println("Error guardando datos: " + e.getMessage());
         }
-        GestorArchivos.guardarObras(todasObras, "obras.csv");
-
-        GestorArchivos.guardarExposiciones(exposiciones.getExposiciones(), "exposiciones.csv");
-
-        // Guardar relación obras-exposiciones
-        GestorArchivos.guardarObrasExposicion(exposiciones.getExposiciones(), "obras_exposicion.csv");
-
-        System.out.println("Datos guardados correctamente.");
-    } catch (IOException e) {
-        System.out.println("Error guardando datos: " + e.getMessage());
     }
-}
     
     
     
