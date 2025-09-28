@@ -143,6 +143,7 @@ public class AgregarExposicion extends javax.swing.JFrame {
             Exposicion ee = new Exposicion(title,inicio,termino,lugar);
             galery.agregarExposicion(ee);
             JOptionPane.showMessageDialog(null,"Exposicion agregada con exito");
+            dispose();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

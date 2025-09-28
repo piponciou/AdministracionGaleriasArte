@@ -48,7 +48,7 @@ public class ListaArtistas {
         }
         return obA;
     }
-    //Requerimiento 2.12: eliminar elementos de la 1ra colecciÃ³n o nivel.
+    //Requerimiento 2.12: eliminar elementos de el primer nivel.
 
     public boolean eliminarArtistaPorRut(String rut) throws ArtistaNoEncontradoException {
         String rutNormalizado = rut.replaceAll("[.\\-\\s]", "").toLowerCase();
@@ -60,14 +60,5 @@ public class ListaArtistas {
         }
         throw new ArtistaNoEncontradoException("Artista con RUT " + rutNormalizado + " no encontrado");
     }
-    
-    /*ESTO VA EN LA VENTANA
-    try {
-        galeria.eliminarArtistaPorRut(rut);
-        mostrarMensaje("Artista eliminado");
-    } catch (ArtistaNoEncontradoException e) {
-        mostrarError(e.getMessage());
-    }
-      */
     
 }

@@ -129,6 +129,7 @@ public class AgregarArtista extends javax.swing.JFrame {
            try{
                String texto = jTextField3.getText().trim();
                edad = Integer.parseInt(texto);
+               
            }catch(NumberFormatException e){
                JOptionPane.showMessageDialog(null,"la edad ingresada no es valida!");
                return;
@@ -141,7 +142,7 @@ public class AgregarArtista extends javax.swing.JFrame {
            
            //mensaje para checkear que pasaron todos los filtros
            JOptionPane.showMessageDialog(null,"Artista agregado con exito!");
-           
+           dispose();
        }
         
         

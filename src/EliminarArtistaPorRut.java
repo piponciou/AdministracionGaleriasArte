@@ -110,11 +110,11 @@ public class EliminarArtistaPorRut extends javax.swing.JFrame {
             try {
                 if (galery.eliminarArtistaPorRut(artistaSeleccionado.getRut())) 
                     JOptionPane.showMessageDialog(null, "Artista Eliminado con éxito!");
-
             }catch (ArtistaNoEncontradoException ex) {
                 JOptionPane.showMessageDialog(null, "Artista no encontrado: " + ex.getMessage());
             }
         }
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
