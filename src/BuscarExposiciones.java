@@ -73,6 +73,11 @@ public class BuscarExposiciones extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
         jButton3.setText("Mostrar obras filtradas");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -163,6 +168,10 @@ public class BuscarExposiciones extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         new BuscarObraEnExposicion().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
