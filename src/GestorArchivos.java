@@ -177,7 +177,13 @@ public class GestorArchivos {
         ArrayList<Exposicion> exposiciones = new ArrayList<>();
         ArrayList<String> lineas = (ArrayList<String>) Files.readAllLines(Paths.get(filename));
         for (String linea : lineas) {
+            if(linea.trim().isEmpty())continue;//se ignoran las lineas vacias
+            
             String[] datos = parseCsvLine(linea);
+            if(datos.length < 4){
+                System.out.println("Linea invalida en exposiciones.csv :"+linea);
+                continue;
+            }
             String nombre = datos[0];
             String fechaInicio = datos[1];
             String fechaTermino = datos[2];
