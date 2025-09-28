@@ -28,7 +28,6 @@ public class ListaObras {
         return true;
     }
 
-    
     public ArrayList<Obra> getObras() {
         return new ArrayList<>(obras); // copia defensiva
     }
@@ -75,8 +74,6 @@ public class ListaObras {
         obras.remove(obraEncontrada);
         mapaObras.remove(obraEncontrada.getTitle());
     }
-
-
 
     //Requerimiento  2.4
     // Modificar el estado de una obra identificada por título

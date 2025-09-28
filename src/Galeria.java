@@ -84,11 +84,11 @@ public class Galeria {
         exposiciones.agregarExposicion(exposicion);
     }
 
-    public Exposicion buscarExposicionPorNombre(String nombre) {
+    public Exposicion buscarExposicionPorNombre(String nombre) throws Exception{
         return exposiciones.buscarPorNombre(nombre);
     }
 
-    public void agregarObraAExposicion(String nombreExp, Obra obra) {
+    public void agregarObraAExposicion(String nombreExp, Obra obra) throws Exception{
         Exposicion exp = buscarExposicionPorNombre(nombreExp);
         if (exp != null) {
             exp.agregarObra(obra);
@@ -126,7 +126,7 @@ public class Galeria {
     }
 
     // Eliminar una obra de una exposición
-    public void eliminarObraDeExposicion(String nombreExposicion, String tituloObra) throws ObraNoEncontradaException {
+    public void eliminarObraDeExposicion(String nombreExposicion, String tituloObra) throws ObraNoEncontradaException, Exception{
         Exposicion exposicion = buscarExposicionPorNombre(nombreExposicion);
         if (exposicion == null) {
             throw new ObraNoEncontradaException("No se encontró la exposición con nombre: " + nombreExposicion);
