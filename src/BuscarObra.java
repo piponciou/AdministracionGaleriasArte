@@ -26,12 +26,14 @@ public class BuscarObra extends javax.swing.JFrame {
         }
         String nombreObras[] = new String[tamaño];
         /*rellenamos el vector*/
+        int indice = 0;
         for(int q = 0; q<artistas.size();q++){
             Artista pp = artistas.get(q);
             ArrayList<Obra> obras = pp.getObras().getObras();
             for(int x = 0; x<obras.size(); x++){
                 if(obras.get(x)!=null){
-                    nombreObras[x] = obras.get(x).getTitle();
+                    nombreObras[indice] = obras.get(x).getTitle();
+                    indice ++;
                 }
                     
             }

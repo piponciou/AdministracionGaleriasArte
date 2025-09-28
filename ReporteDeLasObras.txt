@@ -1,0 +1,3 @@
+TítuloObra|ArtistaNombre|ArtistaRut|AñoDeCreacion|CostoDeObra|EstadoDeObra
+Noche estrellada|Yannahys|21.865.117-8|2000|1.0|DISPONIBLE
+Nymeria de mierda|Felipe|21.680788-k|2025|0.0|VENDIDO

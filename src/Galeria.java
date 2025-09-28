@@ -139,7 +139,28 @@ public class Galeria {
      public boolean eliminarArtistaPorRut(String rut) throws ArtistaNoEncontradoException{
         return (artistas.eliminarArtistaPorRut(rut));
      }
-    
+    //REQUISITO 2.10
+    public void reporteArchivoFinal() {
+        String archivoObras = "ReporteDeLasObras.txt";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoObras))) {
+
+            writer.write("TítuloObra|ArtistaNombre|ArtistaRut|AñoDeCreacion|CostoDeObra|EstadoDeObra");
+            writer.newLine();
+
+            ArrayList<String> finalObras = artistas.ObrasCSV();
+
+            for (String line : finalObras) {
+                writer.write(line);
+                writer.newLine();
+            }
+
+            System.out.println("\nReporte CSV de obras generado: " + archivoObras);
+
+        } catch (IOException e) {
+            System.out.println("Error al escribir el archivo: " + e.getMessage());
+        }
+    }
 
     
 }

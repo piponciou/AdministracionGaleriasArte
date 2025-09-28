@@ -61,12 +61,20 @@ public class ListaObras {
 
     //Requerimiento  2.4 y 2.9
     public void eliminarObraPorTitulo(String titulo) throws ObraNoEncontradaException {
-        Obra obra = mapaObras.remove(titulo);
-        if (obra == null) {
+        Obra obraEncontrada = null;
+        for (Obra obra : obras) {
+            if (obra.getTitle().trim().equalsIgnoreCase(titulo.trim())) {
+                obraEncontrada = obra;
+                break;
+            }
+        }
+        if (obraEncontrada == null) {
             throw new ObraNoEncontradaException("Obra no encontrada con título: " + titulo);
         }
-        obras.remove(obra);
-}
+        obras.remove(obraEncontrada);
+        mapaObras.remove(obraEncontrada.getTitle());
+    }
+
 
 
     //Requerimiento  2.4

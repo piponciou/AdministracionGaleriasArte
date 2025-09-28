@@ -53,7 +53,7 @@ public class ListaArtistas {
     public boolean eliminarArtistaPorRut(String rut) throws ArtistaNoEncontradoException {
         String rutNormalizado = rut.replaceAll("[.\\-\\s]", "").toLowerCase();
         Artista artista = mapaRut.remove(rutNormalizado);
-        System.out.println("rut" + artista.getRut());
+        
         if (artista != null) {
             artistas.remove(artista);
             return true;

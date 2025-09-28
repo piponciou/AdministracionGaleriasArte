@@ -15,8 +15,15 @@ public class ListaExposiciones {
         mapaNombre.put(exposicion.getNombreExposicion(), exposicion);
     }
     public Exposicion buscarPorNombre(String nombre) {
-        return mapaNombre.get(nombre);
+        String nombreNormalizado = nombre.trim();
+        for (Exposicion exposicion : exposiciones) {
+            if (exposicion.getNombreExposicion().trim().equalsIgnoreCase(nombreNormalizado)) {
+                return exposicion;
+            }
+        }
+        return null;
     }
+
     public ArrayList<Exposicion> getExposiciones() {
         //se retorna una lista copia de la original para no romper el principio del encapsulamiento
         return new ArrayList<>(exposiciones);

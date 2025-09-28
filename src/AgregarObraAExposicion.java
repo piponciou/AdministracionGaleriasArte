@@ -213,7 +213,7 @@ public class AgregarObraAExposicion extends javax.swing.JFrame {
       
 
         Obra oo = new Obra(titulo,artistaSeleccionado,año,costo,estado);
-
+        
         galery.agregarObraAExposicion(exposicionSeleccionada.getNombreExposicion(), oo);
 
         JOptionPane.showMessageDialog(null,"Obra agregado la obra con exito a la Exposicion!");
