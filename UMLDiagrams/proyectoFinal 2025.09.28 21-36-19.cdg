@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="proyectoFinal">
+  <ClassDiagramComponents>
+    <Class name="AgregarArtista" package="proyectoFinal" visibility="public" xPosition="1718.0" yPosition="767.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AgregarExposicion" package="proyectoFinal" visibility="public" xPosition="1502.0" yPosition="453.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jTextField4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AgregarObra" package="proyectoFinal" visibility="public" xPosition="2026.0" yPosition="1004.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="artistaSeleccionado" type="Artista" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AgregarObraAExposicion" package="proyectoFinal" visibility="public" xPosition="736.0" yPosition="380.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="artistaSeleccionado" type="Artista" visibility="private"/>
+        <Field name="exposiciones" type="ArrayList&lt;Exposicion&gt;" visibility="private"/>
+        <Field name="exposicionSeleccionada" type="Exposicion" visibility="private"/>
+        <Field name="obraSeleccionada" type="Obra" visibility="private"/>
+        <Field name="indiceObraSeleccionada" type="int" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox3" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox4" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Artista" package="proyectoFinal" visibility="public" xPosition="1925.0" yPosition="703.0">
+      <Fields>
+        <Field name="obras" type="ListaObras" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="rut"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Artista" name="artista"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getObras" returnType="ListaObras" visibility="public"/>
+        <Method name="setObras" returnType="void" visibility="public">
+          <Argument type="ListaObras" name="obras"/>
+        </Method>
+        <Method name="agregarObra" returnType="void" visibility="public">
+          <Argument type="Obra" name="obra"/>
+        </Method>
+        <Method name="mostrarDatos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ArtistaNoEncontradoException" package="proyectoFinal" visibility="public" xPosition="2201.0" yPosition="410.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="buscarArtistaPorRut" package="proyectoFinal" visibility="public" xPosition="1718.0" yPosition="596.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="artistaSeleccionado" type="Artista" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jComboBox1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BuscarObra" package="proyectoFinal" visibility="public" xPosition="1637.0" yPosition="654.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="artistaSeleccionado" type="Artista" visibility="private"/>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jComboBox1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EditarEstadoObra" package="proyectoFinal" visibility="public" xPosition="1718.0" yPosition="884.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="statusSeleccionado" type="String" visibility="private"/>
+        <Field name="tituloSeleccionado" type="String" visibility="private"/>
+        <Field name="rutSeleccionado" type="String" visibility="private"/>
+        <Field name="artistaSeleccionado" type="Artista" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jComboBox1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EliminarArtistaPorRut" package="proyectoFinal" visibility="public" xPosition="1717.0" yPosition="366.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="artistaSeleccionado" type="Artista" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EliminarObraDeExposicion" package="proyectoFinal" visibility="public" xPosition="837.0" yPosition="829.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="exposiciones" type="ArrayList&lt;Exposicion&gt;" visibility="private"/>
+        <Field name="exposicionSeleccionada" type="Exposicion" visibility="private"/>
+        <Field name="obrasExposicionSeleccionada" type="ArrayList&lt;Obra&gt;" visibility="private"/>
+        <Field name="obraSeleccionada" type="Obra" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Exposicion" package="proyectoFinal" visibility="public" xPosition="191.0" yPosition="522.0">
+      <Fields>
+        <Field name="nombreExposicion" type="String" visibility="private"/>
+        <Field name="fechaInicio" type="String" visibility="private"/>
+        <Field name="fechaTermino" type="String" visibility="private"/>
+        <Field name="lugar" type="String" visibility="private"/>
+        <Field name="obrasExpuestas" type="ListaObras" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreExposicion"/>
+          <Argument type="String" name="fechaInicio"/>
+          <Argument type="String" name="fechaTermino"/>
+          <Argument type="String" name="lugar"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreExposicion" returnType="String" visibility="public"/>
+        <Method name="setNombreExposicion" returnType="void" visibility="public">
+          <Argument type="String" name="nombreExposicion"/>
+        </Method>
+        <Method name="getFechaInicio" returnType="String" visibility="public"/>
+        <Method name="setFechaInicio" returnType="void" visibility="public">
+          <Argument type="String" name="fechaInicio"/>
+        </Method>
+        <Method name="getFechaTermino" returnType="String" visibility="public"/>
+        <Method name="setFechaTermino" returnType="void" visibility="public">
+          <Argument type="String" name="fechaTermino"/>
+        </Method>
+        <Method name="getLugar" returnType="String" visibility="public"/>
+        <Method name="setLugar" returnType="void" visibility="public">
+          <Argument type="String" name="lugar"/>
+        </Method>
+        <Method name="getObrasExpuestas" returnType="ListaObras" visibility="public"/>
+        <Method name="setObrasExpuestas" returnType="void" visibility="public">
+          <Argument type="ListaObras" name="obrasExpuestas"/>
+        </Method>
+        <Method name="agregarObra" returnType="void" visibility="public">
+          <Argument type="Obra" name="obra"/>
+        </Method>
+        <Method name="mostrarDatosExposicion" returnType="void" visibility="public"/>
+        <Method name="mostrarDatosExposicion" returnType="void" visibility="public">
+          <Argument type="String" name="status"/>
+        </Method>
+        <Method name="filtrarObrasPorEstado" returnType="ArrayList&lt;Obra&gt;" visibility="public">
+          <Argument type="String" name="estado"/>
+        </Method>
+        <Method name="eliminarObra" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ExposicionNoEncontradaException" package="proyectoFinal" visibility="public" xPosition="191.0" yPosition="1041.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Galeria" package="proyectoFinal" visibility="public" xPosition="1156.0" yPosition="522.0">
+      <Fields>
+        <Field name="artistas" type="ListaArtistas" visibility="private"/>
+        <Field name="exposiciones" type="ListaExposiciones" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarDatos" returnType="void" visibility="public"/>
+        <Method name="guardarDatos" returnType="void" visibility="public"/>
+        <Method name="agregarArtista" returnType="void" visibility="public">
+          <Argument type="Artista" name="artista"/>
+        </Method>
+        <Method name="buscarArtistaPorRut" returnType="Artista" visibility="public">
+          <Argument type="String" name="rut"/>
+        </Method>
+        <Method name="agregarObraAArtista" returnType="void" visibility="public">
+          <Argument type="String" name="rut"/>
+          <Argument type="Obra" name="obra"/>
+        </Method>
+        <Method name="agregarObraAArtista" returnType="void" visibility="public">
+          <Argument type="Artista" name="artista"/>
+          <Argument type="Obra" name="obra"/>
+        </Method>
+        <Method name="mostrarArtistas" returnType="void" visibility="public"/>
+        <Method name="agregarExposicion" returnType="void" visibility="public">
+          <Argument type="Exposicion" name="exposicion"/>
+        </Method>
+        <Method name="buscarExposicionPorNombre" returnType="Exposicion" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="agregarObraAExposicion" returnType="void" visibility="public">
+          <Argument type="String" name="nombreExp"/>
+          <Argument type="Obra" name="obra"/>
+        </Method>
+        <Method name="mostrarExposiciones" returnType="void" visibility="public"/>
+        <Method name="getArrayListArtista" returnType="ArrayList&lt;Artista&gt;" visibility="public"/>
+        <Method name="getArrayListExposicion" returnType="ArrayList&lt;Exposicion&gt;" visibility="public"/>
+        <Method name="editarEstadoObraDeArtista" returnType="void" visibility="public">
+          <Argument type="String" name="rutArtista"/>
+          <Argument type="String" name="tituloObra"/>
+          <Argument type="String" name="nuevoEstado"/>
+        </Method>
+        <Method name="eliminarObraDeExposicion" returnType="void" visibility="public">
+          <Argument type="String" name="nombreExposicion"/>
+          <Argument type="String" name="tituloObra"/>
+        </Method>
+        <Method name="reporteArchivoFinal" returnType="void" visibility="public"/>
+        <Method name="eliminarArtistaPorRut" returnType="boolean" visibility="public">
+          <Argument type="String" name="rut"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GestorArchivos" package="proyectoFinal" visibility="public" xPosition="475.0" yPosition="1041.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="guardarObras" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;Obra&gt;" name="obras"/>
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="cargarObras" returnType="ArrayList&lt;Obra&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="filename"/>
+          <Argument type="ArrayList&lt;Artista&gt;" name="artistas"/>
+        </Method>
+        <Method name="guardarArtistas" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;Artista&gt;" name="artistas"/>
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="cargarArtistas" returnType="ArrayList&lt;Artista&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="encontrarArtistaPorRut" returnType="Artista" visibility="private" isStatic="true">
+          <Argument type="ArrayList&lt;Artista&gt;" name="artistas"/>
+          <Argument type="String" name="rut"/>
+        </Method>
+        <Method name="escapeCsv" returnType="String" visibility="private" isStatic="true">
+          <Argument type="String" name="campo"/>
+        </Method>
+        <Method name="parseCsvLine" returnType="String[]" visibility="private" isStatic="true">
+          <Argument type="String" name="linea"/>
+        </Method>
+        <Method name="guardarExposiciones" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;Exposicion&gt;" name="exposiciones"/>
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="guardarObrasExposicion" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;Exposicion&gt;" name="exposiciones"/>
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="cargarObrasExposicion" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="filename"/>
+          <Argument type="ArrayList&lt;Exposicion&gt;" name="exposiciones"/>
+          <Argument type="ArrayList&lt;Obra&gt;" name="obras"/>
+        </Method>
+        <Method name="cargarExposiciones" returnType="ArrayList&lt;Exposicion&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="filename"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ListaArtistas" package="proyectoFinal" visibility="public" xPosition="1920.0" yPosition="408.0">
+      <Fields>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="mapaRut" type="HashMap&lt;String, Artista&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="agregarArtista" returnType="void" visibility="public">
+          <Argument type="Artista" name="artista"/>
+        </Method>
+        <Method name="buscarPorRut" returnType="Artista" visibility="public">
+          <Argument type="String" name="rut"/>
+        </Method>
+        <Method name="getArtistas" returnType="ArrayList&lt;Artista&gt;" visibility="public"/>
+        <Method name="setArtistas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Artista&gt;" name="artistas"/>
+        </Method>
+        <Method name="mostrarArtistas" returnType="void" visibility="public"/>
+        <Method name="ObrasCSV" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="eliminarArtistaPorRut" returnType="boolean" visibility="public">
+          <Argument type="String" name="rut"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ListadoArtistas" package="proyectoFinal" visibility="public" xPosition="1925.0" yPosition="948.0">
+      <Fields>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Artista&gt;" name="artistas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="ListadoExposiciones" package="proyectoFinal" visibility="public" xPosition="837.0" yPosition="779.0">
+      <Fields>
+        <Field name="exposiciones" type="ArrayList&lt;Exposicion&gt;" visibility="private"/>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="ListaExposiciones" package="proyectoFinal" visibility="public" xPosition="763.0" yPosition="522.0">
+      <Fields>
+        <Field name="exposiciones" type="ArrayList&lt;Exposicion&gt;" visibility="private"/>
+        <Field name="mapaNombre" type="HashMap&lt;String, Exposicion&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="agregarExposicion" returnType="void" visibility="public">
+          <Argument type="Exposicion" name="exposicion"/>
+        </Method>
+        <Method name="buscarPorNombre" returnType="Exposicion" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getExposiciones" returnType="ArrayList&lt;Exposicion&gt;" visibility="public"/>
+        <Method name="setExposiciones" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Exposicion&gt;" name="exposiciones"/>
+        </Method>
+        <Method name="mostrarExposiciones" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaObras" package="proyectoFinal" visibility="public" xPosition="1156.0" yPosition="1063.0">
+      <Fields>
+        <Field name="obras" type="ArrayList&lt;Obra&gt;" visibility="private"/>
+        <Field name="mapaObras" type="HashMap&lt;String, Obra&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ListaObras" name="listaObras"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="agregarObra" returnType="boolean" visibility="public">
+          <Argument type="Obra" name="obra"/>
+        </Method>
+        <Method name="getObras" returnType="ArrayList&lt;Obra&gt;" visibility="public"/>
+        <Method name="setObras" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Obra&gt;" name="obras"/>
+        </Method>
+        <Method name="mostrarTodasObras" returnType="void" visibility="public"/>
+        <Method name="mostrarObrasPorEstado" returnType="void" visibility="public">
+          <Argument type="String" name="status"/>
+        </Method>
+        <Method name="buscarPorTitulo" returnType="Obra" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="eliminarObraPorTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="modificarEstadoObra" returnType="boolean" visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="nuevoEstado"/>
+        </Method>
+        <Method name="filtrarPorEstado" returnType="ArrayList&lt;Obra&gt;" visibility="public">
+          <Argument type="String" name="estado"/>
+        </Method>
+        <Method name="obtenerObrasCSV" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MostrarObrasPorEstado" package="proyectoFinal" visibility="public" xPosition="1718.0" yPosition="825.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="private"/>
+        <Field name="estadoSeleccionado" type="String" visibility="private"/>
+        <Field name="artistas" type="ArrayList&lt;Artista&gt;" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTree1" type="javax.swing.JTree" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Galeria" name="galery"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jComboBox1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Obra" package="proyectoFinal" visibility="public" xPosition="1593.0" yPosition="1014.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="autor" type="Artista" visibility="private"/>
+        <Field name="año" type="int" visibility="private"/>
+        <Field name="costo" type="double" visibility="private"/>
+        <Field name="estado" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="Artista" name="autor"/>
+          <Argument type="int" name="año"/>
+          <Argument type="double" name="costo"/>
+          <Argument type="String" name="estado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="title"/>
+        </Method>
+        <Method name="getAutor" returnType="Artista" visibility="public"/>
+        <Method name="setAutor" returnType="void" visibility="public">
+          <Argument type="Artista" name="autor"/>
+        </Method>
+        <Method name="getYear" returnType="int" visibility="public"/>
+        <Method name="setYear" returnType="void" visibility="public">
+          <Argument type="int" name="year"/>
+        </Method>
+        <Method name="getCost" returnType="double" visibility="public"/>
+        <Method name="setCost" returnType="void" visibility="public">
+          <Argument type="double" name="cost"/>
+        </Method>
+        <Method name="getStatus" returnType="String" visibility="public"/>
+        <Method name="setStatus" returnType="void" visibility="public">
+          <Argument type="String" name="status"/>
+        </Method>
+        <Method name="mostrarDatosObra" returnType="void" visibility="public"/>
+        <Method name="mostrarDatosObra" returnType="void" visibility="public">
+          <Argument type="String" name="status"/>
+        </Method>
+        <Method name="reporteCSVObras" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ObraNoEncontradaException" package="proyectoFinal" visibility="public" xPosition="2000.0" yPosition="1076.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="proyectoFinal" visibility="public" xPosition="2201.0" yPosition="522.0">
+      <Fields>
+        <Field name="rut" type="String" visibility="protected"/>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="edad" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="rut"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRut" returnType="String" visibility="public"/>
+        <Method name="setRut" returnType="void" visibility="public">
+          <Argument type="String" name="rut"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="mostrarDatos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProyectoAvance" package="proyectoFinal" visibility="public" xPosition="1309.0" yPosition="371.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ventana" package="proyectoFinal" visibility="public" xPosition="1156.0" yPosition="445.0">
+      <Fields>
+        <Field name="galery" type="Galeria" visibility="package"/>
+        <Field name="jFrame1" type="javax.swing.JFrame" visibility="private"/>
+        <Field name="jMenu1" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu10" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu11" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu12" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu16" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu2" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu3" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu4" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu5" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu6" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu7" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu8" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu9" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuBar2" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuBar3" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuBar4" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem1" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem10" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem11" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem12" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem13" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem14" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem15" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem2" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem3" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem4" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem5" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem6" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem7" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem8" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem9" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="menu1" type="java.awt.Menu" visibility="private"/>
+        <Field name="menu2" type="java.awt.Menu" visibility="private"/>
+        <Field name="menuBar1" type="java.awt.MenuBar" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jMenuItem2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem10ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem9ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem7ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem8ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem11ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem12ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem13ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem14ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem15ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Visitante" package="proyectoFinal" visibility="public" xPosition="2201.0" yPosition="829.0">
+      <Fields>
+        <Field name="origen" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="rut"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="origen"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getOrigen" returnType="String" visibility="public"/>
+        <Method name="setOrigen" returnType="void" visibility="public">
+          <Argument type="String" name="origen"/>
+        </Method>
+        <Method name="mostrarDatos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="artistas" source="proyectoFinal.AgregarObra" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="mapaRut" source="proyectoFinal.ListaArtistas" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, Artista&gt;"/>
+    <UseRelation source="proyectoFinal.Galeria" target="proyectoFinal.Artista" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="exposiciones" source="proyectoFinal.ListadoExposiciones" target="proyectoFinal.Exposicion" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Exposicion&gt;"/>
+    <HasRelation name="galery" source="proyectoFinal.ListadoExposiciones" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="galery" source="proyectoFinal.buscarArtistaPorRut" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistaSeleccionado" source="proyectoFinal.BuscarObra" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="galery" source="proyectoFinal.Ventana" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistaSeleccionado" source="proyectoFinal.EliminarArtistaPorRut" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectoFinal.Galeria" target="proyectoFinal.Exposicion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obraSeleccionada" source="proyectoFinal.AgregarObraAExposicion" target="proyectoFinal.Obra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obrasExpuestas" source="proyectoFinal.Exposicion" target="proyectoFinal.ListaObras" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListaObras"/>
+    <UseRelation source="proyectoFinal.Artista" target="proyectoFinal.Obra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistas" source="proyectoFinal.AgregarObraAExposicion" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="galery" source="proyectoFinal.MostrarObrasPorEstado" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="exposiciones" source="proyectoFinal.EliminarObraDeExposicion" target="proyectoFinal.Exposicion" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Exposicion&gt;"/>
+    <HasRelation name="artistas" source="proyectoFinal.EliminarArtistaPorRut" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="galery" source="proyectoFinal.EliminarArtistaPorRut" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistas" source="proyectoFinal.buscarArtistaPorRut" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="galery" source="proyectoFinal.AgregarArtista" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistas" source="proyectoFinal.ListaArtistas" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="artistaSeleccionado" source="proyectoFinal.AgregarObra" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectoFinal.ListaObras" target="proyectoFinal.Obra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistas" source="proyectoFinal.Galeria" target="proyectoFinal.ListaArtistas" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListaArtistas"/>
+    <UseRelation source="proyectoFinal.ListaArtistas" target="proyectoFinal.Artista" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistas" source="proyectoFinal.AgregarArtista" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="artistas" source="proyectoFinal.BuscarObra" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="obrasExposicionSeleccionada" source="proyectoFinal.EliminarObraDeExposicion" target="proyectoFinal.Obra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Obra&gt;"/>
+    <UseRelation source="proyectoFinal.GestorArchivos" target="proyectoFinal.Obra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obraSeleccionada" source="proyectoFinal.EliminarObraDeExposicion" target="proyectoFinal.Obra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mapaObras" source="proyectoFinal.ListaObras" target="proyectoFinal.Obra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, Obra&gt;"/>
+    <HasRelation name="autor" source="proyectoFinal.Obra" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistaSeleccionado" source="proyectoFinal.EditarEstadoObra" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="exposicionSeleccionada" source="proyectoFinal.EliminarObraDeExposicion" target="proyectoFinal.Exposicion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obras" source="proyectoFinal.ListaObras" target="proyectoFinal.Obra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Obra&gt;"/>
+    <HasRelation name="galery" source="proyectoFinal.BuscarObra" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistas" source="proyectoFinal.MostrarObrasPorEstado" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <UseRelation source="proyectoFinal.Exposicion" target="proyectoFinal.Obra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistas" source="proyectoFinal.EditarEstadoObra" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="galery" source="proyectoFinal.EliminarObraDeExposicion" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mapaNombre" source="proyectoFinal.ListaExposiciones" target="proyectoFinal.Exposicion" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, Exposicion&gt;"/>
+    <HasRelation name="exposiciones" source="proyectoFinal.Galeria" target="proyectoFinal.ListaExposiciones" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListaExposiciones"/>
+    <IsRelation name="is" source="proyectoFinal.Artista" target="proyectoFinal.Persona"/>
+    <UseRelation source="proyectoFinal.Obra" target="proyectoFinal.Artista" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="exposicionSeleccionada" source="proyectoFinal.AgregarObraAExposicion" target="proyectoFinal.Exposicion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="galery" source="proyectoFinal.AgregarObra" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="galery" source="proyectoFinal.AgregarObraAExposicion" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="exposiciones" source="proyectoFinal.AgregarObraAExposicion" target="proyectoFinal.Exposicion" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Exposicion&gt;"/>
+    <HasRelation name="artistaSeleccionado" source="proyectoFinal.AgregarObraAExposicion" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistas" source="proyectoFinal.ListadoArtistas" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Artista&gt;"/>
+    <HasRelation name="obras" source="proyectoFinal.Artista" target="proyectoFinal.ListaObras" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListaObras"/>
+    <HasRelation name="exposiciones" source="proyectoFinal.ListaExposiciones" target="proyectoFinal.Exposicion" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Exposicion&gt;"/>
+    <HasRelation name="galery" source="proyectoFinal.EditarEstadoObra" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="galery" source="proyectoFinal.AgregarExposicion" target="proyectoFinal.Galeria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectoFinal.GestorArchivos" target="proyectoFinal.Artista" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="artistaSeleccionado" source="proyectoFinal.buscarArtistaPorRut" target="proyectoFinal.Artista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectoFinal.GestorArchivos" target="proyectoFinal.Exposicion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="proyectoFinal.Visitante" target="proyectoFinal.Persona"/>
+    <UseRelation source="proyectoFinal.ListaExposiciones" target="proyectoFinal.Exposicion" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
